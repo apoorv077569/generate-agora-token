@@ -7,7 +7,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "vercel-build": "echo 'Build skipped'",
+    "test": "echo \"No tests configured\""
   },
   "dependencies": {
     "agora-access-token": "^2.0.4",
