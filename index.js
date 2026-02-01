@@ -7,7 +7,7 @@ dotenv.config();
 const{RtcTokenBuilder,RtcRole} = pkg;
 
 const app = express();
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 
 const APP_ID = process.env.APP_ID;
@@ -35,7 +35,7 @@ app.get("/agora/token",(req,res) =>{
         privillegeExpireTime
     );
     console.log("Token generated for: ",channel);
-    res.json({token});
+    return res.json({token});
 });
 app.listen(process.env.PORT,()=>{
     console.log(`Server running on http://localhost:${process.env.PORT}`)
